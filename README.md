@@ -5,6 +5,8 @@ A Java program that parse any input text and extract every date it contains (See
 * **yyyy-MM-dd** _(example: 2017-08-10)_
 * **dd MMMM yyyy** _(example: 10 August 2017)_
 * **MMMM dd, yyyy** _(example: August 10, 2017)_
+
+The addition of other date formats is easy, just add the desired format and indicate the regular expression associated with it in the `DateUtil` class
 ## Input example
 ```
 Marvin Lee Minsky at the Mathematics Genealogy Project; 20 May 2014
