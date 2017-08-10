@@ -20,7 +20,7 @@ public class DateParser {
         for (int i = 0; i < sortedDates.size(); i++) {
             currentDate = sortedDates.get(i);
             if (previousDate != null && previousDate.getDate() != currentDate.getDate()) {
-                System.out.println("\t\t\t\t-" + (((previousDate.getDate() + 1) > 9) ? (previousDate.getDate() + 1) : "0" + (previousDate.getDate() + 1)) + " (" + counter + ")");
+                System.out.println("\t\t\t\t-" + ((previousDate.getDate() > 9) ? previousDate.getDate() : "0" + previousDate.getDate()) + " (" + counter + ")");
                 counter = 1;
             }
             if (previousDate == null || previousDate.getYear() != currentDate.getYear())
@@ -31,6 +31,6 @@ public class DateParser {
                 counter++;
             previousDate = currentDate;
         }
-        System.out.println("\t\t\t\t-" + (((previousDate.getDate() + 1) > 9) ? (previousDate.getDate() + 1) : "0" + (previousDate.getDate() + 1)) + " (" + counter + ")");
+        System.out.println("\t\t\t\t-" + ((previousDate.getDate() > 9) ? previousDate.getDate() : "0" + previousDate.getDate()) + " (" + counter + ")");
     }
 }
